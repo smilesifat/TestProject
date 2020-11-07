@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_001">#2B2B2B</color>
+    <color name="black_002">#1D1D1E</color>
+    <color name="black_transparent">#8F1D1D1E</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_001">#FCFCFC</color>
+    <color name="white_002">#F9F9F9</color>
+    <color name="grey_001">#8A8A8A</color>
+    <color name="grey_002">#ECECEC</color>
+    <color name="grey_003">#8A8A8A</color>
+    <color name="grey_004">#CBCBCB</color>
+    <color name="grey_005">#CECECE</color>
+    <color name="grey_006">#B5B5B5</color>
+    <color name="grey_007">#B5B5B5</color>
+    <color name="grey_008">#999999</color>
+    <color name="grey_09">#1A1A1A</color>
+    <color name="grey_010">#4D4D4D</color>
+    <color name="grey_011">#707070</color>
+    <color name="grey_012">#4D4D4D</color>
+    <color name="grey_013">#515151</color>
+    <color name="green_001">#E9FFF5</color>
+    <color name="green_002">#00BC58</color>
+    <color name="green_003">#00C663</color>
+    <color name="green_004">#00B55B</color>
+    <color name="green">#008E47</color>
+    <color name="pink_001">#FCCCDA</color>
+    <color name="pink">#FFBFD4</color>
+
+</resources>
