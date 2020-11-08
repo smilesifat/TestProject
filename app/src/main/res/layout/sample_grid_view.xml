@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="left"
+        android:src="@drawable/love_plus"/>
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/product_watch_1_1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="0.29dp"
+        android:textColor="@color/black_002"
+        android:id="@+id/product_names"
+        android:text="Microsoft Game Console"
+        android:textSize="13sp"/>
+    <LinearLayout
+        android:layout_width="143dp"
+        android:layout_height="17dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="17dp"
+            android:textColor="@color/black_002"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:text="BDT. 22,850"
+            android:id="@+id/product_price"
+            android:textSize="13sp"/>
+        <TextView
+            android:layout_width="44dp"
+            android:layout_height="17dp"
+            android:textColor="@color/grey_007"
+            android:layout_weight="1"
+            android:id="@+id/product_off"
+            android:text="34% off"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:gravity="center">
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="17dp"
+            android:textColor="@color/grey_007"
+            android:layout_weight="5"
+            android:id="@+id/product_sold"
+            android:text="Solid: 22554"
+            android:textSize="13sp"/>
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="17dp"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:paddingStart="5dp"
+           android:layout_weight="1"
+           android:weightSum="2"
+           android:background="@color/green_004">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="17dp"
+               android:layout_weight="1"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:id="@+id/product_ratings"
+               android:text="4.8"
+               android:textSize="12sp"/>
+           <ImageView
+               android:layout_width="7.69dp"
+               android:layout_weight="1"
+               android:layout_height="17dp"
+               android:src="@drawable/ic_baseline_star_white_24"/>
+       </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

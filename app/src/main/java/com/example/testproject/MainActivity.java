@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.GridView;
 
 import com.example.testproject.adapters.SliderAdapter;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -14,7 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     SliderView sliderView;
     int[] images={R.drawable.image_slider_1,R.drawable.image_slider_2,R.drawable.image_slider_3,R.drawable.image_slider_5};
-
+    private GridView gridView;
+    int[] products={R.drawable.product_bag_1_2,R.drawable.product_watch_1_1};
+    String[] productNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         //variable
         sliderView=findViewById(R.id.imageSlider);
+        gridView=findViewById(R.id.product_grid_view);
 
         //Initialize adapter
 //        SliderAdapter sliderAdapter=new SliderAdapter(images);
@@ -36,5 +40,8 @@ public class MainActivity extends AppCompatActivity {
 //        sliderView.setIndicatorUnselectedColor(Color.GRAY);
 //        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
         sliderView.startAutoCycle();
+
+        //grid layout
+        productNames=getResources().getStringArray(R.array.product_grid_view);
     }
 }
