@@ -2,6 +2,9 @@
 <resources>
     <string-array name="z_drop_premium_shipping">
         <item>Cost: BDT. 4000</item>
+        <item>Cost: BDT. 5000</item>
+        <item>Cost: BDT. 6000</item>
+        <item>Cost: BDT. 3000</item>
     </string-array>
     <string-array name="product_grid_view">
         <item>School Bag 1</item>

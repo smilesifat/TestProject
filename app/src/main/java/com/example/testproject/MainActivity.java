@@ -1,12 +1,20 @@
 package com.example.testproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.testproject.adapters.ExpandableListAdapter;
 import com.example.testproject.adapters.GridViewAdapter;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -33,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
     String[] expandableHeadersChildNames;
     private ExpandableListAdapter expandableListAdapter;
 
+    ImageView Shoe1;
+    ImageView Shoe2;
+    ImageView Shoe3;
+    ImageView Shoe4;
+    ImageView Shoe5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +61,23 @@ public class MainActivity extends AppCompatActivity {
         expandableListAdapter =new ExpandableListAdapter(this,listDataHeader,listDataChild);
 
         expandableListData();
+
+        Shoe1 =findViewById(R.id.shoes1_imageViw);
+        Shoe2 =findViewById(R.id.shoes2_imageViw);
+        Shoe3 =findViewById(R.id.shoes3_imageViw);
+        Shoe4 =findViewById(R.id.shoes4_imageViw);
+        Shoe5 =findViewById(R.id.shoes5_imageViw);
+
+        Shoe2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                setContentView(R.layout.product_options);
+//                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity.this,R.style.BottomSheetDialogTheme);
+//                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(R.layout.product_options ,(LinearLayout) findViewById(R.id.bottomSheetContainer));
+            }
+
+        });
 
         //Initialize adapter
 //        SliderAdapter sliderAdapter=new SliderAdapter(images);
