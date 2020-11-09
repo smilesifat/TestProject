@@ -16,6 +16,7 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
+        android:id="@+id/product_image"
         android:src="@drawable/product_watch_1_1"/>
     <TextView
         android:layout_width="wrap_content"

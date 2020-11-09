@@ -40,4 +40,7 @@ dependencies {
     //slider dependencies
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    //Design Libraries
+    implementation 'de.hdodenhof:circleimageview:3.0.2'
+
 }
