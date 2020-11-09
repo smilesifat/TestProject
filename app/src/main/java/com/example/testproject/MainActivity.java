@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 setContentView(R.layout.product_options);
+
 //                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity.this,R.style.BottomSheetDialogTheme);
 //                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(R.layout.product_options ,(LinearLayout) findViewById(R.id.bottomSheetContainer));
             }

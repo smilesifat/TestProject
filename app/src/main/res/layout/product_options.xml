@@ -33,6 +33,7 @@
                     android:orientation="horizontal"
                     android:layout_height="20dp">
                     <ImageView
+                        android:id="@+id/product_option_cancel"
                         android:layout_width="20dp"
                         android:layout_height="17dp"
                         android:layout_marginStart="16dp"

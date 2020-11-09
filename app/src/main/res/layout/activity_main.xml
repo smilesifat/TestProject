@@ -10,10 +10,11 @@
     android:id="@+id/activity_main"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="@+id/linearLayoutMiddle"
         android:orientation="horizontal">
 
@@ -71,7 +72,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </com.google.android.material.appbar.MaterialToolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/linearLayoutMiddle"
@@ -96,21 +97,20 @@
                     android:id="@+id/imageSlider"
                     android:layout_width="match_parent"
                     android:layout_height="375dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="10dp"
                     app:sliderAnimationDuration="600"
                     app:sliderAutoCycleDirection="back_and_forth"
-                    app:sliderAutoCycleEnabled="true"
                     app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorEnabled="true"
                     app:sliderIndicatorGravity="center_horizontal|bottom"
-                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorMargin="21dp"
                     app:sliderIndicatorOrientation="horizontal"
                     app:sliderIndicatorPadding="3dp"
                     app:sliderIndicatorRadius="2dp"
                     app:sliderIndicatorSelectedColor="#5A5A5A"
                     app:sliderIndicatorUnselectedColor="#FFF"
-                    app:sliderScrollTimeInSec="2"
-                    app:sliderStartAutoCycle="true" />
+                    app:sliderScrollTimeInSec="1"
+                    android:elevation="8dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:layout_width="0dp"
                         android:layout_height="20dp"
                         android:layout_weight="1"
                         android:background="@drawable/round_shape_green"
@@ -148,14 +148,14 @@
                         android:textSize="15sp" />
 
                     <ImageView
-                        android:layout_width="18dp"
+                        android:layout_width="0dp"
                         android:layout_height="18dp"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginStart="25dp"
                         android:layout_weight="1"
                         android:src="@drawable/love_plus" />
 
                     <ImageView
-                        android:layout_width="20dp"
+                        android:layout_width="0dp"
                         android:layout_height="18dp"
                         android:layout_weight="1"
                         android:gravity="left"
@@ -182,10 +182,10 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
-                    android:weightSum="8">
+                    android:weightSum="10">
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:layout_width="5dp"
                         android:layout_height="17dp"
                         android:layout_weight="1"
                         android:text="4.8"
@@ -193,7 +193,7 @@
                         android:textSize="13sp" />
 
                     <ImageView
-                        android:layout_width="10dp"
+                        android:layout_width="0dp"
                         android:layout_height="17dp"
                         android:layout_gravity="start"
                         android:layout_weight="1"
@@ -203,6 +203,7 @@
                         android:layout_width="208dp"
                         android:layout_height="17dp"
                         android:layout_weight="1"
+                        android:layout_marginStart="20dp"
                         android:text="85 Ratings     98 Reviews      80 Orders"
                         android:textSize="13sp" />
 
@@ -374,7 +375,159 @@
                        android:layout_height="wrap_content"/>
 
                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_list_24"/>
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="Specifications"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_local_police_24"/>
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="Reviews"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_ondemand_video_24"/>
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="How To Order"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_help_outline_24"/>
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="FAQ"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_help_center_24"/>
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="Whole Sale Inquiry"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gray_border_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_format_align_left_24"/>
+                    <TextView
+                        android:id="@+id/expandable_header_name"
+                        android:layout_width="260dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:text="Description"
+                        android:textColor="@color/grey_013"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -727,6 +880,7 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
