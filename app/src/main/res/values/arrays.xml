@@ -10,4 +10,20 @@
         <item>School Bag 1</item>
         <item>Watch 1</item>
     </string-array>
+    <string-array name="header_expandable_list">
+        <item>Specifications</item>
+        <item>Reviews</item>
+        <item>How to Order</item>
+        <item>FAQ</item>
+        <item>Wholesale Inquiry</item>
+        <item>Descriptions</item>
+    </string-array>
+    <string-array name="header_expandable_list_child">
+        <item>Sub Item 1</item>
+        <item>Sub Item 2</item>
+        <item>Sub Item 3</item>
+        <item>Sub Item 4</item>
+        <item>Sub Item 5</item>
+        <item>Sub Item 6</item>
+    </string-array>
 </resources>

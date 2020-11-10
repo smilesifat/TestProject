@@ -10,107 +10,125 @@
     android:id="@+id/activity_main"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:layout_constraintTop_toTopOf="@+id/linearLayoutMiddle"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="9dp"
-            android:weightSum="10"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="9">
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="left"
-                    android:background="@drawable/round_shape"
-                    android:drawableStart="@drawable/ic_baseline_keyboard_arrow_left_24" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="68dp"
-                android:layout_height="30dp"
-                android:gravity="right"
-                android:layout_weight="1">
-                <LinearLayout
-                    android:layout_width="68dp"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/round_shape"
-                    android:layout_gravity="right"
-                    android:weightSum="3">
-
-                    <Button
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="9dp"
-                        android:paddingEnd="9dp"
-                        android:paddingStart="9dp"
-                        android:background="@drawable/round_shape"
-                        android:drawableEnd="@drawable/search" />
-
-                    <Button
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/round_shape"
-                        android:layout_weight="1"
-                        android:paddingEnd="9dp"
-                        android:drawableStart="@drawable/ic_baseline_more_vert_24" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
-
     <LinearLayout
         android:id="@+id/linearLayoutMiddle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/appbar"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:scrollbars="vertical">
-
-                <com.smarteist.autoimageslider.SliderView
-                    android:id="@+id/imageSlider"
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="375dp"
-                    android:layout_marginBottom="10dp"
-                    app:sliderAnimationDuration="600"
-                    app:sliderAutoCycleDirection="back_and_forth"
-                    app:sliderIndicatorAnimationDuration="600"
-                    app:sliderIndicatorEnabled="true"
-                    app:sliderIndicatorGravity="center_horizontal|bottom"
-                    app:sliderIndicatorMargin="21dp"
-                    app:sliderIndicatorOrientation="horizontal"
-                    app:sliderIndicatorPadding="3dp"
-                    app:sliderIndicatorRadius="2dp"
-                    app:sliderIndicatorSelectedColor="#5A5A5A"
-                    app:sliderIndicatorUnselectedColor="#FFF"
-                    app:sliderScrollTimeInSec="1"
-                    android:elevation="8dp"/>
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearLayoutMiddle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="9dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="9">
+
+                            <Button
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/round_shape"
+                                android:drawableStart="@drawable/ic_baseline_keyboard_arrow_left_24"
+                                tools:ignore="RtlHardcoded" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="68dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            tools:ignore="RtlHardcoded">
+                            <LinearLayout
+                                android:layout_width="78dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="right"
+                                android:paddingStart="12dp"
+                                android:background="@drawable/round_shape"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/search" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@color/grey_005"
+                                    android:layout_height="match_parent"/>
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/ic_baseline_more_vert_24"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="375dp">
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="8dp"
+                        app:sliderAnimationDuration="1000"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="21dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="4dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/green_004"
+                        app:sliderIndicatorUnselectedColor="@color/white"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true">
+                    </com.smarteist.autoimageslider.SliderView>
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_marginTop="340dp"
+                        android:layout_marginBottom="340dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="340dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@drawable/chinese_flag" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -130,6 +148,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/bdt_strike_line"
                         android:layout_width="39dp"
                         android:layout_height="20dp"
                         android:layout_weight="1"
@@ -364,18 +383,18 @@
                     </LinearLayout>
                 </LinearLayout>
 
-               <LinearLayout
+               <RelativeLayout
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:orientation="vertical">
+                   android:layout_height="match_parent">
 
                    <ExpandableListView
                        android:id="@+id/expendable_list_view"
                        android:layout_width="match_parent"
-                       android:layout_height="wrap_content"/>
+                       android:layout_height="match_parent"/>
 
-               </LinearLayout>
-                <LinearLayout
+               </RelativeLayout>
+
+<!--                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/gray_border_background"
@@ -400,6 +419,7 @@
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -425,6 +445,7 @@
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -450,6 +471,7 @@
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -501,6 +523,7 @@
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
@@ -527,7 +550,8 @@
                         android:layout_margin="16dp"
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
-                </LinearLayout>
+                </LinearLayout>-->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
