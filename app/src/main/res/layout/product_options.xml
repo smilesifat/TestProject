@@ -9,7 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="750dp">
+        android:layout_height="match_parent">
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
                     android:weightSum="5"
@@ -172,8 +172,8 @@
                     android:layout_height="27dp"
                     android:layout_marginStart="18dp"
                     android:layout_marginEnd="310dp"
-                    android:layout_marginTop="7dp"
-                    android:paddingTop="7dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="1dp"
                     android:textAlignment="textStart"
                     android:textStyle="bold"
                     android:textSize="13sp"
@@ -182,7 +182,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:weightSum="5"
                     android:paddingStart="18dp"
@@ -255,7 +255,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:weightSum="5"
                     android:paddingStart="18dp"
@@ -292,8 +292,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="120.5dp"
                     android:orientation="vertical"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
                     android:paddingBottom="10dp"
                     android:background="@drawable/gray_box_background"
                     android:gravity="center"

@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView StrikeLine;
 
+    ImageView ProductCancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         Shoe3 =findViewById(R.id.shoes3_imageViw);
         Shoe4 =findViewById(R.id.shoes4_imageViw);
         Shoe5 =findViewById(R.id.shoes5_imageViw);
+        ProductCancel=findViewById(R.id.product_cancel);
 
         StrikeLine=findViewById(R.id.bdt_strike_line);
         StrikeLine.setPaintFlags(StrikeLine.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);
@@ -95,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
         Shoe2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //setContentView(R.layout.product_options);
-
                 BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(
                         MainActivity.this,R.style.BottomSheetDialogTheme);
                 View bottomSheetView= LayoutInflater.from(getApplicationContext()).
@@ -110,11 +111,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-
         });
-        Shoe3.setOnClickListener(new View.OnClickListener() {
+        Shoe1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent backActivity=new Intent(MainActivity.this,ProductActivity.class);
+                startActivity(backActivity);
             }
         });
 
